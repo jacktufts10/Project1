@@ -1,0 +1,137 @@
+
+
+  body {
+      
+   
+   
+
+    height:fit-content
+    ;
+    background-color: powderblue;
+    color: black
+    font-size: 18px;
+    
+}
+h3 { 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+h1 {
+    font-family: "Hatton-Light";
+    font-weight: lighter;
+    src: url(files/Hatton-Light.otf) format(opentype) ;
+}
+.background-image {
+    display: flex;
+    background-image: url("images/clouds-backgroundimage.png");
+    background-size: c;
+    background-position: 50% 50%;
+    background-position-y: center;
+    -webkit-animation: slide 25s linear infinite;
+}
+@-webkit-keyframes slide {
+    from {background-position: 0 0;}
+    to {background-position: -400px 0;}
+}
+
+.poem {
+    height: max-content;
+    width:max-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.poem-text-column {
+    width: max-content;
+    height: max-content;
+    position: relative;
+    color: black;
+    flex-direction: column;
+    align-items: :left;
+    display:flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 4%;
+    margin: 1%;
+    
+    }
+<style>
+.example1 {
+ height: 50px;	
+ overflow: hidden;
+ position: fixed;
+}
+.example1 h3 {
+ font-size: medium;
+ color: black;
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 25px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+ }
+ .example1 h3:hover {
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    }
+
+    .poem {
+        padding:3px;
+        border:1px solid #e6e6e6;
+        width:max-content;
+        overflow:hidden;
+      }
+      .poem-text-column{
+        display:block;
+      position:relative;
+      animation:scroll 20s linear infinite;
+      padding:3px;
+      }
+      
+      .poem-text-column:hover {
+          animation-play-state: paused
+      }
+      
+    
+      
+      /* Make it move */
+      @keyframes scroll{
+      0% {left:100%;}
+      100% {left:-100%;}
+      }
+     
+</style>
+
