@@ -55,8 +55,12 @@ h1 {
     flex: 1;
     padding: 4%;
     margin: 1%;
-    
     }
+nav {
+    display: none;
+}
+
+}
 <style>
 .example1 {
  height: 50px;	
@@ -118,7 +122,8 @@ h1 {
         display:block;
       position:relative;
       animation:scroll 20s linear infinite;
-      padding:3px;
+       padding:3px;
+        
       }
       
       .poem-text-column:hover {
@@ -134,8 +139,8 @@ h1 {
       
       /* Make it move */
       @keyframes scroll{
-      0% {left:100%;}
-      100% {left:-100%;}
+      0% {right:100%;}
+      100% {right:-100%;}
       }
      
 </style>
